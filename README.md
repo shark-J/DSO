@@ -5,41 +5,44 @@ part 1:install
 *********************************************
 step 1:install opencv 3.2.0
 
-  sudo apt-get install libopencv-dev python-opencv
-  sudo apt-get install build-essential
-  sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-  sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+	sudo apt-get install libopencv-dev python-opencv
+  	sudo apt-get install build-essential
+  	sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+  	sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
   download opencv-3.2.0 from https://opencv.org/releases/
   or you can copy the file in this github.
-  tar xvf  opencv-3.2.0.tar.gz
-  cd opencv-3.2.0
-  cmake ..
-  make 
-  sudo make install
+	
+	tar xvf  opencv-3.2.0.tar.gz
+  	cd opencv-3.2.0
+  	cmake ..
+  	make 
+  	sudo make install
   !!!during install, ippicv_linux_20151201.tgz should be downloaded, place it in /home/js/opencv-3.2.0/buid/3rdparty/ippicv/ippicv_lnx
-  sudo gedit /etc/bash.bashrc
+	
+	sudo gedit /etc/bash.bashrc
   add PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfigexportPKG_CONFIG_PATH
-  source /etc/bash.bashrc
+  	
+	source /etc/bash.bashrc
   
  **********************************************
 step 2:install eigen3
 
-  sudo apt-get install libsuitesparse-dev libeigen3-dev libboost-all-dev
+	sudo apt-get install libsuitesparse-dev libeigen3-dev libboost-all-dev
   
 ***********************************************
 step 3:install opencv-lib (install or not)
 
-  sudo apt-get install libopencv-dev
+	 sudo apt-get install libopencv-dev
   
 ***********************************************
 step 4:install Pangolin
  
- git clone https://github.com/stevenlovegrove/Pangolin.git
-  sudo apt install libgl1-mesa-dev
-  cd Pangolin
-  mkdir build
+ 	git clone https://github.com/stevenlovegrove/Pangolin.git
+	sudo apt install libgl1-mesa-dev
+	cd Pangolin
+	mkdir build
 	cd build
-  cmake ..
+	cmake ..
 	cmake --build .
   
 ***********************************************
@@ -99,6 +102,7 @@ setp 8:run dso with USB cam
 
 ***************************************************
 PS. camera calibration using ROS
+	
 	t1:roscore
 	t2:source ~/catkin_ws/devel/setup.bash
 	roslaunch usb_cam usb_cam-test.launch
